@@ -7,16 +7,14 @@ import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
-@Component("musicPlayerBean")
-@Scope("singleton")
+
 public class MusicPlayer {
     private Music music1;
     private Music music2;
 
     private Random random = new Random();
 
-    @Autowired
-    public MusicPlayer(@Qualifier("rockMusicBean") Music music1, @Qualifier("metalMusicBean") Music music2) {
+    public MusicPlayer(Music music1, Music music2) {
         this.music1 = music1;
         this.music2 = music2;
     }
