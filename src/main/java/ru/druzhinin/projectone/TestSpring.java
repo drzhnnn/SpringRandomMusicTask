@@ -9,8 +9,7 @@ public class TestSpring {
                 SpringConfig.class);
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-        musicPlayer.playMusic(MusicGenre.ROCK);
-        musicPlayer.playMusic(MusicGenre.METAL);
+        musicPlayer.playMusic();
 
         context.close();
     }
